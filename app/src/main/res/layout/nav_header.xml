@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/_180sdp"
+    android:background="@drawable/navback2"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:padding="@dimen/_20sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:srcCompat="@drawable/ic_account_circle"/>
+
+    <TextView
+        android:id="@+id/navprofilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Name"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="@dimen/_16sdp"/>
+
+
+</LinearLayout>
