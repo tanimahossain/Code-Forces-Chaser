@@ -1,8 +1,5 @@
 package com.example.codeforceschaser;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,11 +13,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class Register extends AppCompatActivity {
 
@@ -87,14 +91,25 @@ public class Register extends AppCompatActivity {
                     regconfirmpassword.setError("Passwords doesn't match");
                     return;
                 }
-
                 regprogbar.setVisibility(View.VISIBLE);
                 regAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Register.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Register.this, MainActivity.class));
+                            FirebaseUser user = regAuth.getCurrentUser();
+                            user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(Register.this,"Successfully Registered. A verification Email has been sent. Please verify your Email.",Toast.LENGTH_LONG);
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG);
+                                }
+                            });
+                            //Toast.makeText(Register.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Register.this, LogIn.class));
                             finish();
                         } else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {

@@ -11,18 +11,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb4726a-6ba4-4a58-b688-059c3a8772d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="52004cd44229c57d" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -57,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Calculator" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -163,26 +176,26 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="402" y="176" width="840" height="481" key="AndroidCreateResourceFileDialog/0.30.1366.738@0.30.1366.738" timestamp="1606604933011" />
-    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1606914891949">
+    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1607018015860">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1606914891949" />
-    <state width="1286" height="217" key="GridCell.Tab.0.bottom" timestamp="1606925956195">
+    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1607018015860" />
+    <state width="1286" height="217" key="GridCell.Tab.0.bottom" timestamp="1607006393306">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1286" height="217" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1606925956195" />
-    <state width="1286" height="217" key="GridCell.Tab.0.center" timestamp="1606925956195">
+    <state width="1286" height="217" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1607006393306" />
+    <state width="1286" height="217" key="GridCell.Tab.0.center" timestamp="1607006393306">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1286" height="217" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1606925956195" />
-    <state width="1286" height="217" key="GridCell.Tab.0.left" timestamp="1606925956195">
+    <state width="1286" height="217" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1607006393306" />
+    <state width="1286" height="217" key="GridCell.Tab.0.left" timestamp="1607006393306">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1286" height="217" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1606925956195" />
-    <state width="1286" height="217" key="GridCell.Tab.0.right" timestamp="1606925956195">
+    <state width="1286" height="217" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1607006393306" />
+    <state width="1286" height="217" key="GridCell.Tab.0.right" timestamp="1607006393306">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1286" height="217" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1606925956195" />
+    <state width="1286" height="217" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1607006393306" />
     <state x="184" y="42" key="SettingsEditor" timestamp="1606616450411">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
