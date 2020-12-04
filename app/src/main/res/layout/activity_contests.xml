@@ -5,6 +5,39 @@
     android:id="@+id/drawerlayout_contests"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contests">
+    tools:context=".Contests"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarcontest"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:elevation="4dp"
+            android:navigationIcon="@drawable/ic_menu">
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.circularreveal.CircularRevealFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_contest"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_drawer_menu"
+        android:layout_gravity="start"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -11,24 +11,28 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:background="@color/white">
+
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbarprofile"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             android:elevation="4dp"
-            android:navigationIcon="@drawable/ic_menu"
-            />
-        <FrameLayout
-            android:id="@+id/fregment_container"
+            android:navigationIcon="@drawable/ic_menu">
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.circularreveal.CircularRevealFrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent">
+
+        </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_view_profile"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:headerLayout="@layout/nav_header"

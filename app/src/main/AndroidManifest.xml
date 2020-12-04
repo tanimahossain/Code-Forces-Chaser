@@ -13,11 +13,11 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Contests"
-            android:label="Profile"
+            android:label="Chase by Contests"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Friends"
-            android:label="Friends"
+            android:label="Chase by Friends"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LogIn">
             <intent-filter>
