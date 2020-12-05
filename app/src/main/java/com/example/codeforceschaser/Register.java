@@ -100,12 +100,12 @@ public class Register extends AppCompatActivity {
                             user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Register.this,"Successfully Registered. A verification Email has been sent. Please verify your Email.",Toast.LENGTH_LONG);
+                                    Toast.makeText(Register.this,"Successfully Registered. A verification Email has been sent. Please verify your Email.",Toast.LENGTH_LONG).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG);
+                                    Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG).show();
                                 }
                             });
                             //Toast.makeText(Register.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
@@ -130,5 +130,9 @@ public class Register extends AppCompatActivity {
         Intent startIntent = new Intent(getApplication(),LogIn.class);
         startActivity(startIntent);
         finish();
+    }
+    public void GoToReset(View v){
+        Intent startIntent = new Intent(getApplication(),ResetPassword.class);
+        startActivity(startIntent);
     }
 }

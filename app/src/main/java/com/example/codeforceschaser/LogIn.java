@@ -85,12 +85,12 @@ public class LogIn extends AppCompatActivity {
                                 user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(LogIn.this,"Please Verify the email. A verification mail has been sent to your email.",Toast.LENGTH_LONG);
+                                        Toast.makeText(LogIn.this,"Please Verify the email. A verification mail has been sent to your email.",Toast.LENGTH_LONG).show();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(LogIn.this,"Couldn't send the email.",Toast.LENGTH_LONG);
+                                        Toast.makeText(LogIn.this,"Couldn't send the email.",Toast.LENGTH_LONG).show();
                                     }
                                 });
                                 FirebaseAuth.getInstance().signOut();
@@ -115,6 +115,10 @@ public class LogIn extends AppCompatActivity {
     }
     public void GoToProfile(View v){
         Intent startIntent = new Intent(getApplication(),MainActivity.class);
+        startActivity(startIntent);
+    }
+    public void GoToReset(View v){
+        Intent startIntent = new Intent(getApplication(),ResetPassword.class);
         startActivity(startIntent);
     }
 }
