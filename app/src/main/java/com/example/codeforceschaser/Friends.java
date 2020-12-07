@@ -50,6 +50,12 @@ public class Friends extends AppCompatActivity implements NavigationView.OnNavig
                 startActivity(intent);
                 finish();
                 break;
+            case R.id.nav_friendlist:
+                finish();
+                intent= new Intent(getApplication(),FriendList.class);
+                startActivity(intent);
+                finish();
+                break;
             case R.id.nav_friends:
                 break;
             case R.id.nav_Contests:

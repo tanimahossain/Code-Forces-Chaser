@@ -9,6 +9,11 @@
             android:title="Profile"
             />
         <item
+            android:id="@+id/nav_friendlist"
+            android:icon="@drawable/ic_baseline_people_outline_24"
+            android:title="Friend List"
+            />
+        <item
             android:id="@+id/nav_friends"
             android:icon="@drawable/ic_friends"
             android:title="Chase by Friends"

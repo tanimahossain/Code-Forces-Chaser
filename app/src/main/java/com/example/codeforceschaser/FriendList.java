@@ -14,24 +14,26 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Contests extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class FriendList extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
     Toolbar toolbar;
     NavigationView navigationView;
+    FirebaseAuth frndlistAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contests);
-        toolbar= findViewById(R.id.toolbarcontest);
+        setContentView(R.layout.activity_friend_list);
+        toolbar= findViewById(R.id.toolbarfriendlist);
         setSupportActionBar(toolbar);
-        drawer=findViewById(R.id.drawerlayout_contests);
+        drawer=findViewById(R.id.drawerlayout_friendlist);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        navigationView=findViewById(R.id.nav_view_contest);
+        navigationView=findViewById(R.id.nav_view_friendlist);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_Contests);
+        navigationView.setCheckedItem(R.id.nav_view_friendlist);
+        frndlistAuth=FirebaseAuth.getInstance();
     }
 
     @Override
@@ -40,9 +42,8 @@ public class Contests extends AppCompatActivity implements NavigationView.OnNavi
             drawer.closeDrawer(GravityCompat.START);
         }else super.onBackPressed();
     }
-
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
         switch(menuItem.getItemId()){
             case R.id.nav_Profile:
                 finish();
@@ -51,10 +52,6 @@ public class Contests extends AppCompatActivity implements NavigationView.OnNavi
                 finish();
                 break;
             case R.id.nav_friendlist:
-                finish();
-                intent= new Intent(getApplication(),FriendList.class);
-                startActivity(intent);
-                finish();
                 break;
             case R.id.nav_friends:
                 finish();
@@ -63,6 +60,10 @@ public class Contests extends AppCompatActivity implements NavigationView.OnNavi
                 finish();
                 break;
             case R.id.nav_Contests:
+                finish();
+                intent= new Intent(getApplication(),Contests.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.nav_LogOut:
                 finish();

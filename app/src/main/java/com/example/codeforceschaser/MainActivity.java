@@ -3,6 +3,8 @@ package com.example.codeforceschaser;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     DrawerLayout drawer;
     Toolbar toolbar;
+    Button resetpassbtn;
     NavigationView navigationView;
     FirebaseAuth mainAuth;
     @Override
@@ -26,14 +29,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         toolbar= findViewById(R.id.toolbarprofile);
         setSupportActionBar(toolbar);
-        drawer=findViewById(R.id.drawerlayout);
+        drawer=findViewById(R.id.drawerlayout_profile);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
+        resetpassbtn = findViewById(R.id.Profile_ResetPass_Button);
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view_profile);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_Profile);
         mainAuth=FirebaseAuth.getInstance();
+        resetpassbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplication(),ResetPassword.class);
+                startActivity(startIntent);
+            }
+        });
     }
 
     @Override
@@ -48,9 +59,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch(menuItem.getItemId()){
             case R.id.nav_Profile:
                 break;
+            case R.id.nav_friendlist:
+                finish();
+                Intent intent= new Intent(getApplication(),FriendList.class);
+                startActivity(intent);
+                finish();
+                break;
             case R.id.nav_friends:
                 finish();
-                Intent intent= new Intent(getApplication(),Friends.class);
+                intent= new Intent(getApplication(),Friends.class);
                 startActivity(intent);
                 finish();
                 break;

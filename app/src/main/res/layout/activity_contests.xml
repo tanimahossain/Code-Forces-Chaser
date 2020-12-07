@@ -22,12 +22,13 @@
             android:elevation="4dp"
             android:navigationIcon="@drawable/ic_menu">
         </androidx.appcompat.widget.Toolbar>
-
+        <!--Start editing from here-->
         <com.google.android.material.circularreveal.CircularRevealFrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+        <!--End editing from here-->
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
