@@ -45,19 +45,19 @@ public class Contests extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.nav_Profile:
-                finish();
+                //finish();
                 Intent intent= new Intent(getApplication(),MainActivity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.nav_friendlist:
-                finish();
+                //finish();
                 intent= new Intent(getApplication(),FriendList.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.nav_friends:
-                finish();
+                //finish();
                 intent= new Intent(getApplication(),Friends.class);
                 startActivity(intent);
                 finish();
@@ -65,7 +65,7 @@ public class Contests extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_Contests:
                 break;
             case R.id.nav_LogOut:
-                finish();
+                //finish();
                 FirebaseAuth.getInstance().signOut();
                 intent= new Intent(getApplication(),LogIn.class);
                 startActivity(intent);

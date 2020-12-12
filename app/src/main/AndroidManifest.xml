@@ -15,12 +15,10 @@
             android:label="Friend List"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResetPassword" />
-        <activity
-            android:name=".Contests"
+        <activity android:name=".Contests"
             android:label="Chase by Contests"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Friends"
+        <activity android:name=".Friends"
             android:label="Chase by Friends"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LogIn">

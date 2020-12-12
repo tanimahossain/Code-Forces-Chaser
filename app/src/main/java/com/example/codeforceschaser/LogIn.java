@@ -36,8 +36,8 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setContentView(R.layout.activity_log_in);
 
         loginemail= findViewById(R.id.loginemailet);
@@ -97,6 +97,7 @@ public class LogIn extends AppCompatActivity {
                                 return;
                             }
                             Toast.makeText(LogIn.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
+                            loginprogbar.setVisibility(View.INVISIBLE);
                             startActivity(new Intent(LogIn.this, MainActivity.class));
                             finish();
                         } else {

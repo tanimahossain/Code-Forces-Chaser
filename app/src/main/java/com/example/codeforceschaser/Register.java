@@ -3,6 +3,7 @@ package com.example.codeforceschaser;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.Window;
@@ -24,6 +25,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Register extends AppCompatActivity {
@@ -33,6 +39,8 @@ public class Register extends AppCompatActivity {
     TextView logintext,forgetpasstext;
     FirebaseAuth regAuth;
     ProgressBar regprogbar;
+    FirebaseFirestore regfstore;
+    String dataUserID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +48,7 @@ public class Register extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setContentView(R.layout.activity_register);
         reghandle= findViewById(R.id.registercfhandleet);
         regemail= findViewById(R.id.registeremailet);
@@ -49,6 +58,7 @@ public class Register extends AppCompatActivity {
         logintext= findViewById(R.id.registertologintw);
         forgetpasstext= findViewById(R.id.registerforgotpasswordtw);
         regAuth=FirebaseAuth.getInstance();
+        regfstore=FirebaseFirestore.getInstance();
         regprogbar=findViewById(R.id.registerprogressBar);
 
         if(regAuth.getCurrentUser()!=null){
@@ -59,10 +69,10 @@ public class Register extends AppCompatActivity {
         regbutton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String email=regemail.getText().toString().trim();
+                final String email=regemail.getText().toString().trim();
                 String password=regpassword.getText().toString().trim();
                 String confirmpassword=regconfirmpassword.getText().toString().trim();
-                String CFhandle=reghandle.getText().toString().trim();
+                final String CFhandle=reghandle.getText().toString().trim();
                 if(TextUtils.isEmpty(CFhandle)){
                     reghandle.setError("Code Forces Handle is required");
                     return;
@@ -87,7 +97,7 @@ public class Register extends AppCompatActivity {
                     regpassword.setError("Password can't be less than 6 characters");
                     return;
                 }
-                if(password.equals(confirmpassword)==false){
+                if(!password.equals(confirmpassword)){
                     regconfirmpassword.setError("Passwords doesn't match");
                     return;
                 }
@@ -96,6 +106,27 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            dataUserID=FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            DocumentReference documentReference=regfstore.collection("users").document(dataUserID);
+                            Map<String,Object> datauser=new HashMap<>();
+                            datauser.put("name",CFhandle);
+                            datauser.put("email",email);
+                            datauser.put("cfhandle",CFhandle);
+                            datauser.put("cfmaxrating",1974);
+                            datauser.put("cfmaxrank","Candidate Master");
+                            documentReference.set(datauser).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d("Register: ","Profile info saved");
+                                    Toast.makeText(Register.this,"Profile info saved",Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d("Register: ","Error: "+e.toString());
+                                    Toast.makeText(Register.this,"Couldn't save profile info."+e.toString(),Toast.LENGTH_SHORT).show();
+                                }
+                            });
                             FirebaseUser user = regAuth.getCurrentUser();
                             user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -108,7 +139,8 @@ public class Register extends AppCompatActivity {
                                     Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG).show();
                                 }
                             });
-                            //Toast.makeText(Register.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
+                            FirebaseAuth.getInstance().signOut();
+                            //finish();
                             startActivity(new Intent(Register.this, LogIn.class));
                             finish();
                         } else {
@@ -126,6 +158,7 @@ public class Register extends AppCompatActivity {
             }
         });
     }
+
     public void GoToLogin(View v){
         Intent startIntent = new Intent(getApplication(),LogIn.class);
         startActivity(startIntent);

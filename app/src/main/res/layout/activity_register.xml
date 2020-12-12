@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@color/white"
+        android:id="@+id/register_layout"
         tools:context="first.javatpoint.com.hidetitlebar.Register">
 
         <ImageView
@@ -29,7 +30,7 @@
             app:srcCompat="@drawable/midpic" />
 
         <TextView
-            android:id="@+id/logintitletw"
+            android:id="@+id/registertitletw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -53,7 +54,7 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logintitletw" />
+            app:layout_constraintTop_toBottomOf="@+id/registertitletw" />
 
         <EditText
             android:id="@+id/registercfhandleet"

@@ -45,13 +45,13 @@ public class Friends extends AppCompatActivity implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.nav_Profile:
-                finish();
+                //finish();
                 Intent intent= new Intent(getApplication(),MainActivity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.nav_friendlist:
-                finish();
+                //finish();
                 intent= new Intent(getApplication(),FriendList.class);
                 startActivity(intent);
                 finish();
@@ -59,13 +59,13 @@ public class Friends extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_friends:
                 break;
             case R.id.nav_Contests:
-                finish();
+                //finish();
                 intent= new Intent(getApplication(),Contests.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.nav_LogOut:
-                finish();
+                //finish();
                 FirebaseAuth.getInstance().signOut();
                 intent= new Intent(getApplication(),LogIn.class);
                 startActivity(intent);
