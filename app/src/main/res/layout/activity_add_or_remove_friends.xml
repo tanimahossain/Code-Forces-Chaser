@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="true"
-    >
-<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".ResetPassword">
-
+    tools:context=".AddOrRemoveFriends">
     <ImageView
-        android:id="@+id/ResetPassImageView"
+        android:id="@+id/AddorRemoveImageView"
         android:layout_width="@dimen/_250sdp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -26,50 +19,74 @@
         />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/AddorRemoveTW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-black"
-        android:text="Reset Password"
+        android:text="Add Or Remove Friends"
         android:textColor="@color/red"
         android:textSize="@dimen/_24sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ResetPassImageView"
+        app:layout_constraintTop_toBottomOf="@+id/AddorRemoveImageView"
         />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/AddorRemoveET"
         android:layout_width="@dimen/_220sdp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter the Email"
-        android:inputType="textEmailAddress"
+        android:hint="Enter the CodeForces Handle"
+        android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/AddorRemoveTW" />
 
     <Button
-        android:id="@+id/ResetPassButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/AddFriendButton"
+        android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Send mail to reset password"
         android:textColor="@color/white"
+        android:text="Add this handle as friend"
         android:background="@drawable/button_bg_rounded_corners"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/AddorRemoveET" />
+    <Button
+        android:id="@+id/RemoveFriendButton"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="Remove this handle from friend"
+        android:background="@drawable/button_bg_rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddFriendButton" />
+
+    <TextView
+        android:id="@+id/dumptext"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RemoveFriendButton" />
 
     <ProgressBar
-        android:id="@+id/ResetPasswordProgressBar"
+        android:id="@+id/AddorRemoveFriendProgressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,6 +94,5 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ResetPassButton" />
+        app:layout_constraintTop_toBottomOf="@+id/dumptext" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

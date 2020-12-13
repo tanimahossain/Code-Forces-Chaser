@@ -23,18 +23,20 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
     Toolbar toolbar;
-    Button resetpassbtn;
+    Button resetpassbtn,addremovefrndbtn;
     NavigationView navigationView;
     FirebaseAuth mainAuth;
     FirebaseFirestore mainfstore;
-    public String MainUserID,UserName,UserCFHandle,UserEmail,UserMaxRank;
+    static public String MainUserID,UserName,UserCFHandle,UserEmail,UserMaxRank;
     public Integer UserMaxRating;
     public TextView ShowUserName,ShowCFHandle,ShowEmail,ShowMaxRating,ShowMaxRank;
-    //ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
+    static public ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
     final public String TAG="Profile";
     boolean dataupdated=false;
     @Override
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawer=findViewById(R.id.drawerlayout_profile);
         resetpassbtn = findViewById(R.id.Profile_ResetPass_Button);
+        addremovefrndbtn = findViewById(R.id.Profile_AddorRemove_Friends);
         navigationView=findViewById(R.id.nav_view_profile);
         View headerView = navigationView.getHeaderView(0);
         toolbar= findViewById(R.id.toolbarprofile);
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_view_profile);
         mainAuth=FirebaseAuth.getInstance();
         mainfstore=FirebaseFirestore.getInstance();
         resetpassbtn.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +72,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(startIntent);
             }
         });
-
+        addremovefrndbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplication(),AddOrRemoveFriends.class);
+                startActivity(startIntent);
+            }
+        });
         if(dataupdated==false) GetAllTheUserData();
         //ShowUserName.setText("Tanima Hossain");
         //ShowCFHandle.setText(UserCFHandle);
@@ -140,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     ShowMaxRank.setText(documentSnapshot.getString("cfmaxrank"));
                     UserMaxRank=ShowMaxRank.getText().toString();
-                    //frndlistfromfirestore= (ArrayList<String>) documentSnapshot.get("cffriends");
+                    frndlistfromfirestore= (ArrayList<String>) documentSnapshot.get("cffriends");
                     dataupdated=true;
                 }
             }

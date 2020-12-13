@@ -23,11 +23,20 @@
             android:navigationIcon="@drawable/ic_menu">
         </androidx.appcompat.widget.Toolbar>
         <!--Start editing from here-->
-        <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work In Progress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <!--End editing from here-->
 
 

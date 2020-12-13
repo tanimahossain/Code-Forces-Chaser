@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -149,17 +150,13 @@ public class Register extends AppCompatActivity {
         datauser.put("cfhandle",CFhandle);
         datauser.put("cfmaxrating",0);
         datauser.put("cfmaxrank","Newbie");
-        //ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
-        //datauser.put("cffriends",frndlistfromfirestore);
+        ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
+        frndlistfromfirestore.add(CFhandle);
+        //these needs to be erased
+        frndlistfromfirestore.add("oseriuh");
+        datauser.put("friends",frndlistfromfirestore);
 
-        documentReference.set(datauser).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-
-                Log.d("Register: ","Profile info saved");
-                Toast.makeText(Register.this,"Profile info saved",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
+        documentReference.set(datauser).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
 
@@ -168,8 +165,6 @@ public class Register extends AppCompatActivity {
                 Toast.makeText(Register.this,"Couldn't save profile info."+e.toString(),Toast.LENGTH_SHORT).show();
             }
         });
-
-
         user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

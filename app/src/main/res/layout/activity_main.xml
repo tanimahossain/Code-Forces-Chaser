@@ -99,18 +99,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/Profile_MaxRating_editText" />
 
             <Button
-                android:id="@+id/Profile_updateProfile_Button"
-                android:layout_width="@dimen/_220sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Update Profile"
-                android:textColor="@color/white"
-                android:background="@drawable/button_bg_rounded_corners"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Profile_MaxRank_editText" />
-
-            <Button
                 android:id="@+id/Profile_AddorRemove_Friends"
                 android:layout_width="@dimen/_220sdp"
                 android:layout_height="wrap_content"
@@ -120,7 +108,7 @@
                 android:background="@drawable/button_bg_rounded_corners"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Profile_updateProfile_Button" />
+                app:layout_constraintTop_toBottomOf="@+id/Profile_MaxRank_editText" />
 
             <Button
                 android:id="@+id/Profile_ResetPass_Button"

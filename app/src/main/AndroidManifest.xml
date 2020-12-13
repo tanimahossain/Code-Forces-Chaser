@@ -11,19 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FriendList"
+        <activity android:name=".AddOrRemoveFriends"></activity>
+        <activity
+            android:name=".FriendList"
             android:label="Friend List"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".Contests"
+        <activity
+            android:name=".Contests"
             android:label="Chase by Contests"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Friends"
+        <activity
+            android:name=".Friends"
             android:label="Chase by Friends"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
