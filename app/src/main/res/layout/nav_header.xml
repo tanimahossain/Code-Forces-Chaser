@@ -8,19 +8,28 @@
     android:theme="@style/ThemeOverlay.AppCompat.Light"
     android:padding="@dimen/_20sdp">
 
-    <ImageView
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp"
-        app:srcCompat="@drawable/ic_account_circle"/>
-
     <TextView
         android:id="@+id/navprofilename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Name"
+        android:text=""
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"
         android:textSize="@dimen/_16sdp"/>
+    <TextView
+        android:id="@+id/navcfhandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"/>
+    <TextView
+        android:id="@+id/navemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"/>
 
 
 </LinearLayout>

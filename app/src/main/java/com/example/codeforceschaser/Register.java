@@ -50,6 +50,8 @@ public class Register extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setContentView(R.layout.activity_register);
+
+
         reghandle= findViewById(R.id.registercfhandleet);
         regemail= findViewById(R.id.registeremailet);
         regpassword= findViewById(R.id.registerpasswordet);
@@ -69,10 +71,14 @@ public class Register extends AppCompatActivity {
         regbutton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
+
                 final String email=regemail.getText().toString().trim();
                 String password=regpassword.getText().toString().trim();
                 String confirmpassword=regconfirmpassword.getText().toString().trim();
                 final String CFhandle=reghandle.getText().toString().trim();
+
+
                 if(TextUtils.isEmpty(CFhandle)){
                     reghandle.setError("Code Forces Handle is required");
                     return;
@@ -106,43 +112,9 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            dataUserID=FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            DocumentReference documentReference=regfstore.collection("users").document(dataUserID);
-                            Map<String,Object> datauser=new HashMap<>();
-                            datauser.put("name",CFhandle);
-                            datauser.put("email",email);
-                            datauser.put("cfhandle",CFhandle);
-                            datauser.put("cfmaxrating",1974);
-                            datauser.put("cfmaxrank","Candidate Master");
-                            documentReference.set(datauser).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d("Register: ","Profile info saved");
-                                    Toast.makeText(Register.this,"Profile info saved",Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d("Register: ","Error: "+e.toString());
-                                    Toast.makeText(Register.this,"Couldn't save profile info."+e.toString(),Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                            FirebaseUser user = regAuth.getCurrentUser();
-                            user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Register.this,"Successfully Registered. A verification Email has been sent. Please verify your Email.",Toast.LENGTH_LONG).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG).show();
-                                }
-                            });
-                            FirebaseAuth.getInstance().signOut();
-                            //finish();
-                            startActivity(new Intent(Register.this, LogIn.class));
-                            finish();
+
+                            sendUserData();
+
                         } else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                 Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
@@ -157,6 +129,64 @@ public class Register extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    private void sendUserData() {
+
+        dataUserID=FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        FirebaseUser user = regAuth.getCurrentUser();
+
+        DocumentReference documentReference= regfstore.collection("users").document(dataUserID);
+
+        String email=regemail.getText().toString().trim();
+        String CFhandle=reghandle.getText().toString().trim();
+
+        Map<String,Object> datauser=new HashMap<>();
+
+        datauser.put("name",CFhandle);
+        datauser.put("email",email);
+        datauser.put("cfhandle",CFhandle);
+        datauser.put("cfmaxrating",0);
+        datauser.put("cfmaxrank","Newbie");
+        //ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
+        //datauser.put("cffriends",frndlistfromfirestore);
+
+        documentReference.set(datauser).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+                Log.d("Register: ","Profile info saved");
+                Toast.makeText(Register.this,"Profile info saved",Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+                Log.d("Register: ","Error: "+e.toString());
+
+                Toast.makeText(Register.this,"Couldn't save profile info."+e.toString(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(Register.this,"Successfully Registered. A verification Email has been sent. Please verify your Email or else your data will be lost",Toast.LENGTH_LONG).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Register.this,"Couldn't send the email.",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        FirebaseAuth.getInstance().signOut();
+        //finish();
+        startActivity(new Intent(Register.this, LogIn.class));
+        finish();
+
     }
 
     public void GoToLogin(View v){

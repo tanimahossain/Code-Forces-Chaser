@@ -3,6 +3,7 @@ package com.example.codeforceschaser;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.Window;
@@ -23,14 +24,25 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
 
 public class LogIn extends AppCompatActivity {
 
     EditText loginemail,loginpassword;
     Button loginbutton;
-    TextView registertext,loginforgetpasstext;
+    TextView registertext,loginforgetpasstext,navname,navhandle,navemail;
     FirebaseAuth loginAuth;
+    FirebaseFirestore loginfstore;
     ProgressBar loginprogbar;
+    String LoginUserID,UserName,UserCFHandle,UserEmail,UserMaxRank;
+    Integer UserMaxRating;
+    ArrayList<String> frndlistfromfirestore= new ArrayList<String>();
+    boolean dataupdated=false;
+    final public String TAG="Login";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +57,9 @@ public class LogIn extends AppCompatActivity {
         loginbutton= findViewById(R.id.loginbutton);
         registertext= findViewById(R.id.logintoregistertw);
         loginforgetpasstext= findViewById(R.id.loginforgotpasswordtw);
+        navname= findViewById(R.id.navprofilename);
+        navhandle= findViewById(R.id.navcfhandle);
+        navemail= findViewById(R.id.navemail);
 
         loginAuth=FirebaseAuth.getInstance();
         loginprogbar=findViewById(R.id.loginprogressBar);
@@ -57,7 +72,7 @@ public class LogIn extends AppCompatActivity {
         loginbutton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String email=loginemail.getText().toString().trim();
+                final String email=loginemail.getText().toString().trim();
                 String password=loginpassword.getText().toString().trim();
                 if(TextUtils.isEmpty(email)){
                     loginemail.setError("Email is required");
@@ -86,6 +101,7 @@ public class LogIn extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         Toast.makeText(LogIn.this,"Please Verify the email. A verification mail has been sent to your email.",Toast.LENGTH_LONG).show();
+
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
@@ -94,10 +110,17 @@ public class LogIn extends AppCompatActivity {
                                     }
                                 });
                                 FirebaseAuth.getInstance().signOut();
-                                return;
+                                finish();
+                                startActivity(new Intent(LogIn.this, LogIn.class));
+                                finish();
                             }
                             Toast.makeText(LogIn.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
                             loginprogbar.setVisibility(View.INVISIBLE);
+                            UserEmail=email;
+                            UserName="Update Your Name";
+                            UserCFHandle="Update Your CF Handle";
+                            UserMaxRating=0;
+                            UserMaxRank="N/A";
                             startActivity(new Intent(LogIn.this, MainActivity.class));
                             finish();
                         } else {
@@ -121,5 +144,70 @@ public class LogIn extends AppCompatActivity {
     public void GoToReset(View v){
         Intent startIntent = new Intent(getApplication(),ResetPassword.class);
         startActivity(startIntent);
+    }
+    public void GetAllTheUserData(){
+
+        LoginUserID=loginAuth.getCurrentUser().getUid();
+        DocumentReference documentReference=loginfstore.collection("users").document(LoginUserID);
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.exists()){
+                    UserEmail=documentSnapshot.getString("email");
+                    UserName=documentSnapshot.getString("name");
+                    UserCFHandle=documentSnapshot.getString("cfhandle");
+                    UserMaxRating=(Integer)documentSnapshot.get("cfmaxrating");
+                    UserMaxRank=documentSnapshot.getString("cfmaxrank");
+                    //frndlistfromfirestore= (ArrayList<String>) documentSnapshot.get("cffriends");
+                    navemail.setText(UserEmail);
+                    navhandle.setText(UserCFHandle);
+                    navname.setText(UserName);
+                    dataupdated=true;
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG,e.toString());
+                UserName="Update Your Name";
+                UserCFHandle="Update Your CF Handle";
+                UserMaxRating=0;
+                UserMaxRank="N/A";
+                //frndlistfromfirestore.clear();
+                navemail.setText(UserEmail);
+                navhandle.setText(UserCFHandle);
+                navname.setText(UserName);
+                Log.d(TAG,e.toString());
+            }
+        });
+        return;
+    }
+    public String getUserEmail(){
+        return UserEmail;
+    }
+    public String getUserName(){
+        return UserName;
+    }
+    public String getUserCFHandle(){
+        return UserCFHandle;
+    }
+    public Integer getUserMaxRating(){
+        return UserMaxRating;
+    }
+    public String getUserMaxRank(){
+        return UserMaxRank;
+    }
+    //public ArrayList<String> getUserFriedList(){
+        //return frndlistfromfirestore;
+    //}
+    public void clearall(){
+        UserEmail="";
+        UserName="";
+        UserCFHandle="";
+        UserMaxRating=0;
+        UserMaxRank="";
+        dataupdated=false;
+        //frndlistfromfirestore.clear();
+        return;
     }
 }
