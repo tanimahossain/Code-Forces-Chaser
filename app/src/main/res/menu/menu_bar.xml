@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile_menu"
+            android:icon="@drawable/menubar_home_icon"
+            android:orderInCategory="1"
+            android:title="Profile"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/friends_menu"
+            android:icon="@drawable/friend"
+            android:orderInCategory="3"
+            android:title="Friends"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/chase_by_contest_menu"
+            android:icon="@drawable/contest"
+            android:orderInCategory="5"
+            android:title="Chase your friends"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/recent_performance_menu"
+            android:icon="@drawable/performance"
+            android:orderInCategory="6"
+            android:title="Recent Performance"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/activity_population"
+            android:icon="@drawable/performance"
+            android:orderInCategory="7"
+            android:title="Population"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/about_menu"
+            android:icon="@drawable/menubar_about_icon"
+            android:orderInCategory="8"
+            android:title="About"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/logout_menu"
+            android:icon="@drawable/menubar_logout_icon"
+            android:orderInCategory="9"
+            android:title="Logout"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

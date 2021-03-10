@@ -1,42 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.codeforceschaser">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.codeforces_chaser">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".AddOrRemoveFriends"></activity>
+        android:theme="@style/Theme.CodeForces_Chaser">
         <activity
-            android:name=".FriendList"
-            android:label="Friend List"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResetPassword" />
+            android:name=".friends_solves"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Contests"
-            android:label="Chase by Contests"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".population"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Friends"
-            android:label="Chase by Friends"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LogIn">
+            android:name=".friend_add_del"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".friends"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".recent_performance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chase_by_contest"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SpalshScren">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
         <activity
             android:name=".MainActivity"
-            android:label="Profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

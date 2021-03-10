@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".login">
+
+
+    <EditText
+        android:id="@+id/handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:hint="handle"
+        android:inputType="textPersonName"
+        android:textColor="@color/aqua"
+        android:textColorHint="@color/aqua"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/handle_submit"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aladin"
+        android:onClick="chaser_login"
+        android:text="submit"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/steel_blue" />
+</LinearLayout>

@@ -1,110 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="chaser_log" />
+        <option name="name" value="chaser_log" />
+        <option name="packageNamePattern" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="chaser_log" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beb4726a-6ba4-4a58-b688-059c3a8772d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/AddOrRemoveFriends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_or_remove_friends.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codeforceschaser/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_friend_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_friend_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_friends.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_friends.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8b9c5a66-5a5b-42a4-926b-42294ce1c6b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[52004cd44229c57d]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
+        <option value="valueResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../cf_chaser_key.jks" />
+    <option name="KEY_ALIAS" value="ahmed" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
-  <component name="ProjectId" id="1kt0rNumWEzn3mp55whJn4P5Isq" />
+  <component name="ProjectId" id="1lyuTx6v5RbvmT4rV3qRv4XRZZh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="CodeForces_Chaser.app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Android apps/Code Forces Chaser" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.76573194">
-      <recent name="com.example.codeforceschaser" />
-    </key>
-    <key name="android.template.784870249">
-      <recent name="com.example.codeforceschaser" />
-    </key>
-    <key name="android.template.1856048853">
-      <recent name="com.example.codeforceschaser" />
+    <key name="android.template.1635094703">
+      <recent name="com.example.codeforces_chaser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\Android apps\Code Forces Chaser\app\src\main\res\drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res" />
     </key>
-    <key name="android.template.1693284060">
-      <recent name="com.example.codeforceschaser" />
+    <key name="android.template.-867144950">
+      <recent name="com.example.codeforces_chaser" />
     </key>
-    <key name="android.template.1890487241">
-      <recent name="com.example.codeforceschaser" />
+    <key name="android.template.-2070638483">
+      <recent name="com.example.codeforces_chaser" />
+    </key>
+    <key name="android.template.-967169404">
+      <recent name="com.example.codeforces_chaser" />
+    </key>
+    <key name="android.template.506054121">
+      <recent name="com.example.codeforces_chaser" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,7 +97,7 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="Code_Forces_Chaser.app" />
+      <module name="CodeForces_Chaser.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -178,74 +159,62 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="beb4726a-6ba4-4a58-b688-059c3a8772d2" name="Default Changelist" comment="" />
-      <created>1606504777278</created>
+      <changelist id="8b9c5a66-5a5b-42a4-926b-42294ce1c6b1" name="Default Changelist" comment="" />
+      <created>1608581663257</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606504777278</updated>
+      <updated>1608581663257</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="200" y="131" key="#PSD" timestamp="1607798064337">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="345" y="27" width="666" height="741" key="#MainActivity" timestamp="1608655286816">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="200" y="131" key="#PSD/0.30.1366.738@0.30.1366.738" timestamp="1607798064337" />
-    <state x="488" y="108" key="#com.intellij.ide.util.MemberChooser" timestamp="1607171158834">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="345" y="27" width="666" height="741" key="#MainActivity/0.27.1366.741@0.27.1366.741" timestamp="1608655286816" />
+    <state x="491" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1609829857423">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="488" y="108" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1607171158834" />
-    <state x="363" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607159274049">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="491" y="105" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1609829857423" />
+    <state x="542" y="125" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1609769791794">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="363" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.30.1366.738@0.30.1366.738" timestamp="1607159274049" />
-    <state x="413" y="146" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607862136112">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="542" y="125" width="824" height="491" key="AndroidCreateResourceFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1609769791794" />
+    <state x="342" y="155" width="671" height="491" key="Downloadable.Font.Dialog.Size" timestamp="1609845916710">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="413" y="146" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1366.738@0.30.1366.738" timestamp="1607862136112" />
-    <state x="402" y="176" width="840" height="481" key="AndroidCreateResourceFileDialog" timestamp="1606604933011">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="342" y="155" width="671" height="491" key="Downloadable.Font.Dialog.Size/0.27.1366.741@0.27.1366.741" timestamp="1609845916710" />
+    <state x="461" y="158" width="424" height="491" key="FileChooserDialogImpl" timestamp="1609613773272">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="402" y="176" width="840" height="481" key="AndroidCreateResourceFileDialog/0.30.1366.738@0.30.1366.738" timestamp="1606604933011" />
-    <state x="122" y="68" key="DiffContextDialog" timestamp="1607862106739">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="461" y="158" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1609613773272" />
+    <state width="1366" height="89" key="GridCell.Tab.0.bottom" timestamp="1609445951425">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="122" y="68" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1607862106739" />
-    <state x="463" y="154" key="FileChooserDialogImpl" timestamp="1607763248491">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state width="1366" height="89" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1609445951425" />
+    <state width="1366" height="89" key="GridCell.Tab.0.center" timestamp="1609445951424">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="463" y="154" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1607763248491" />
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1607886881205">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state width="1366" height="89" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1609445951424" />
+    <state width="1366" height="89" key="GridCell.Tab.0.left" timestamp="1609445951422">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1607886881205" />
-    <state width="1323" height="238" key="GridCell.Tab.0.center" timestamp="1607886881204">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state width="1366" height="89" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1609445951422" />
+    <state width="1366" height="89" key="GridCell.Tab.0.right" timestamp="1609445951424">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1607886881204" />
-    <state width="1323" height="238" key="GridCell.Tab.0.left" timestamp="1607886881204">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state width="1366" height="89" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1609445951424" />
+    <state x="455" y="177" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1609761316749">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1607886881204" />
-    <state width="1323" height="238" key="GridCell.Tab.0.right" timestamp="1607886881205">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="455" y="177" width="446" height="447" key="chooseDestDirectoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1609761316749" />
+    <state x="338" y="241" width="680" height="319" key="edit.logcat.filter.dialog.dimensions" timestamp="1608714461073">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1323" height="238" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1607886881205" />
-    <state x="432" y="101" key="RollbackChangesDialog" timestamp="1607862125847">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="338" y="241" width="680" height="319" key="edit.logcat.filter.dialog.dimensions/0.27.1366.741@0.27.1366.741" timestamp="1608714461073" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1609177370872">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="432" y="101" key="RollbackChangesDialog/0.30.1366.738@0.30.1366.738" timestamp="1607862125847" />
-    <state x="184" y="42" key="SettingsEditor" timestamp="1606616450411">
-      <screen x="0" y="30" width="1366" height="738" />
-    </state>
-    <state x="184" y="42" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1606616450411" />
-    <state x="499" y="177" key="chooseDestDirectoryDialog" timestamp="1607813173760">
-      <screen x="0" y="30" width="1366" height="738" />
-    </state>
-    <state x="499" y="177" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1607813173760" />
-    <state x="379" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1607159255997">
-      <screen x="0" y="30" width="1366" height="738" />
-    </state>
-    <state x="379" y="223" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1607159255997" />
+    <state width="600" height="428" key="javadoc.popup/0.27.1366.741@0.27.1366.741" timestamp="1609177370872" />
   </component>
 </project>

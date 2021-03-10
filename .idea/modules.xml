@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Code_Forces_Chaser.iml" filepath="$PROJECT_DIR$/.idea/modules/Code_Forces_Chaser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Code_Forces_Chaser.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Code_Forces_Chaser.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeForces_Chaser.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeForces_Chaser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CodeForces_Chaser.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CodeForces_Chaser.app.iml" />
     </modules>
   </component>
 </project>
