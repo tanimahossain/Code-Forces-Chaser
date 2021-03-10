@@ -12,7 +12,7 @@ This app will save a lot off time to compare your performance to others, you jus
 * [x] Your current performance
 * [x] Codeforces population
 
-#### apk file [codeforces chaser](https://github.com/tanimahossain/Code-Forces-Chaser/files/6118739/cf.chaser.zip)
+### apk file : [codeforces chaser](https://github.com/tanimahossain/Code-Forces-Chaser/files/6118739/cf.chaser.zip)
 
 ## How it should work:
 
