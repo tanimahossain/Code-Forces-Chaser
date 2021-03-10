@@ -12,6 +12,10 @@ This app will save a lot off time to compare your performance to others, you jus
 * [x] Your current performance
 * [x] Codeforces population
 
+## Download apk
+
+[cf chaser.zip](https://github.com/tanimahossain/Code-Forces-Chaser/files/6118739/cf.chaser.zip)
+
 ## How it should work:
 
 Add Friend | Chase Your Friends | Recent Performance
