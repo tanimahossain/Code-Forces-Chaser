@@ -11,4 +11,5 @@ This app will save a lot off time to compare your performance to to others, you 
 * [x] Chase your friend by contest
 * [x] Your current performance
 * [x] Codeforces population
-<img src="https://i.ibb.co/G2hQbrS/20210310-205804.gif" alt="20210310-205804" border="0">
+
+![3rd and 4th step](https://i.ibb.co/G2hQbrS/20210310-205804.gif)
