@@ -12,4 +12,4 @@ This app will save a lot off time to compare your performance to to others, you 
 * [x] Your current performance
 * [x] Codeforces population
 
-![3rd and 4th step](https://i.ibb.co/G2hQbrS/20210310-205804.gif)
+<a href="https://ibb.co/VSKYPk4"><img src="https://i.ibb.co/G2hQbrS/20210310-205804.gif" alt="20210310-205804" border="0"></a>
