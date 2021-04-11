@@ -1,7 +1,7 @@
 # *CodeForces Chaser*
 
 [Codeforces Online judge](https://codeforces.com/) is a popular platform among all competitive programmers around the world.\
-Main perpose of this app is to Chase Someone on this platform as keep track of all the data manually is not possible.\
+Main perpose of this app is to Chase Someone on this platform to improve your rank, as keep tracking of all the data manually is not possible.\
 This app will save a lot off time to compare your performance to others, you just have to add peoples that you want to chase!!
 
 ## Features
