@@ -1,5 +1,9 @@
 # *CodeForces Chaser*
 
+[![GitHub license](https://img.shields.io/github/license/tanimahossain/Code-Forces-Chaser.svg)](https://github.com/tanimahossain/Code-Forces-Chaser/blob/main/LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/tanimahossain/Code-Forces-Chaser.svg?style=social&label=Fork)](https://github.com/tanimahossain/Code-Forces-Chaser)
+[![GitHub stars](https://img.shields.io/github/stars/tanimahossain/Code-Forces-Chaser.svg?style=social&label=Stars)](https://github.com/tanimahossain/Code-Forces-Chaser)
+
 [Codeforces Online judge](https://codeforces.com/) is a popular platform among all competitive programmers around the world.\
 Main perpose of this app is to Chase Someone on this platform to improve your rank, as keep tracking of all the data manually is not possible.\
 This app will save a lot off time to compare your performance to others, you just have to add peoples that you want to chase!!
