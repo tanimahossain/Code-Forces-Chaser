@@ -1,6 +1,6 @@
 # *CodeForces Chaser*
 
-[![made-with-java]()](https://img.shields.io/badge/java-%23ED8B00.svg)
+[![made-with-java](https://img.shields.io/badge/java-%23ED8B00.svg)]
 [![GitHub license](https://img.shields.io/github/license/tanimahossain/Code-Forces-Chaser.svg)](https://github.com/tanimahossain/Code-Forces-Chaser/blob/main/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/tanimahossain/Code-Forces-Chaser.svg?style=social&label=Fork)](https://github.com/tanimahossain/Code-Forces-Chaser)
 [![GitHub stars](https://img.shields.io/github/stars/tanimahossain/Code-Forces-Chaser.svg?style=social&label=Stars)](https://github.com/tanimahossain/Code-Forces-Chaser)
